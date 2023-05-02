@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour
         showAttackMessage = true;
     }
 
+    public void GoToLevel2()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+
     void OnGUI()
     {
         GUI.skin = layout;
