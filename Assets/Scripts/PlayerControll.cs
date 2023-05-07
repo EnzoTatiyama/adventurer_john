@@ -9,7 +9,7 @@ public class PlayerControll : MonoBehaviour
     public KeyCode space = KeyCode.Space;
     public KeyCode cKey = KeyCode.C;
     
-    private int attackPower = 10;
+    private int attackPower = 5;
     private float playerVelocity = 200f;
     private float jumpForce = 250f;
     private float moveX;
@@ -22,6 +22,7 @@ public class PlayerControll : MonoBehaviour
     public EnemyControl enemyControl;
 
     private bool isCollidingEnemy;
+    private bool canAttack;
 
     private void FixedUpdate()
     {
@@ -72,8 +73,9 @@ public class PlayerControll : MonoBehaviour
             isGrounded = true;
         } else if (collision.gameObject.tag == "Enemy") {
             isCollidingEnemy = true;
-            if (anim.GetBool("playerAttack")) {
+            if (anim.GetBool("playerAttack") && canAttack) {
                 enemyControl.TakeDamage(attackPower);
+                canAttack = false;
             }
         }
     }
@@ -96,8 +98,13 @@ public class PlayerControll : MonoBehaviour
             Attack();
         }
 
-        if (isCollidingEnemy && anim.GetBool("playerAttack")) {
+        if (anim.GetBool("playerAttack") == false) {
+            canAttack = true;
+        }
+
+        if (isCollidingEnemy && anim.GetBool("playerAttack") && canAttack) {
             enemyControl.TakeDamage(attackPower);
+            canAttack = false;
         }
     }
 }
