@@ -6,7 +6,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public LifeDisplay lifeDisplay;
+    public PlayerControll player;
     public GUISkin layout;
+    private Scene scene;
 
     public bool showAttackMessage = false;
     public bool showMoveMessage = false;
@@ -19,6 +21,12 @@ public class GameManager : MonoBehaviour
         attackMessageTimeLeft = messageTime;
         moveMessageTimeLeft = messageTime;
         showMoveMessage = true;
+        scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "Level 2") {
+            player.GetSword();
+        }
+
     }
 
     // Update is called once per frame
@@ -62,6 +70,7 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Level 1") {
             if (showAttackMessage) {
+                if (showMoveMessage) showMoveMessage = false;
                 GUI.Label(new Rect((Screen.width / 2) - 150, (Screen.height / 2) - 125, 500, 100), "Aperte 'C' para atacar");
             }
             if (showMoveMessage) {
