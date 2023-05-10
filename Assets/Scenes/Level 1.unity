@@ -3376,8 +3376,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1694095499796032734, guid: ef84386a1f13944759669138afa0d147, type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694095499796032734, guid: ef84386a1f13944759669138afa0d147, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1694095499246863439}
+    - target: {fileID: 1694095499796032734, guid: ef84386a1f13944759669138afa0d147, type: 3}
+      propertyPath: newColor.b
+      value: 0.0040494935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694095499796032734, guid: ef84386a1f13944759669138afa0d147, type: 3}
+      propertyPath: newColor.g
+      value: 0.0040494935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694095499796032734, guid: ef84386a1f13944759669138afa0d147, type: 3}
+      propertyPath: newColor.r
+      value: 0.8584906
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef84386a1f13944759669138afa0d147, type: 3}
+--- !u!212 &1694095499246863439 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1694095499796032709, guid: ef84386a1f13944759669138afa0d147, type: 3}
+  m_PrefabInstance: {fileID: 1694095499246863438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3751096769193043197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3500,6 +3525,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5248830094939294304, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1829326260}
+    - target: {fileID: 5248830094939294304, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
       propertyPath: lifeDisplay
       value: 
       objectReference: {fileID: 1105654227}
@@ -3507,6 +3536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5248830094939294316, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1829326260}
     - target: {fileID: 5248830094939294316, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
       propertyPath: enemyControl
       value: 

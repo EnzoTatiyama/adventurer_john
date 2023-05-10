@@ -7,7 +7,6 @@ public class EnemyControl : MonoBehaviour
     public Rigidbody2D rb;
     public int health = 2;
 
-    public Color newColor;
     public SpriteRenderer sprite;
     
     IEnumerator DamageEffectSequence()

@@ -12,7 +12,6 @@ public class MenuManager : MonoBehaviour
 
     public void Quit()
     {
-        print("QUIT");
         Application.Quit();
     }
 }

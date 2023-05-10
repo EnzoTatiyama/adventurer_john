@@ -655,7 +655,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 237101262}
   health: 30
-  newColor: {r: 1, g: 0, b: 0, a: 0}
   sprite: {fileID: 237101260}
 --- !u!114 &237101265
 MonoBehaviour:
@@ -1169,7 +1168,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: d5bacf7103ea446ddabfbfae4f012f32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1251,6 +1250,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5248830094939294304, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1396879798}
+    - target: {fileID: 5248830094939294304, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
       propertyPath: lifeDisplay
       value: 
       objectReference: {fileID: 864997709}
@@ -1262,6 +1265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5248830094939294316, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1396879798}
     - target: {fileID: 5248830094939294316, guid: 89d2450f61ba74215afd4836d76e2b81, type: 3}
       propertyPath: enemyControl
       value: 
@@ -3694,7 +3701,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -738492018, guid: fb8834741f3fe44e89fec443602389e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -4624,7 +4631,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: d5bacf7103ea446ddabfbfae4f012f32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

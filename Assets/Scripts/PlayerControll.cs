@@ -19,6 +19,8 @@ public class PlayerControll : MonoBehaviour
     public Animator anim;
     public SpriteRenderer sprite;
 
+    public GameManager gameManager;
+
     public EnemyControl enemyControl;
 
     private bool isCollidingEnemy;
@@ -85,6 +87,18 @@ public class PlayerControll : MonoBehaviour
         if (collision.gameObject.tag == "Enemy") {
             isCollidingEnemy = false;
         }
+    }
+
+    IEnumerator DieDelay()
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameManager.PlayerDied();
+    }
+
+    public void PlayerDie()
+    {
+        anim.SetTrigger("playerDie");
+        StartCoroutine(DieDelay());
     }
 
     public void GetSword()

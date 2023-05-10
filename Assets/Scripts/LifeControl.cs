@@ -7,6 +7,7 @@ public class LifeControl : MonoBehaviour
     public int health;
     public int maxHealth = 10;
     public LifeDisplay lifeDisplay;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class LifeControl : MonoBehaviour
     {
         health -= damage;
         if (health <= 0) {
-            //Destroy(gameObject);
+            gameManager.PlayerDiedAnimation();
         } else {
             lifeDisplay.ChangeLife(health);
         }

@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         showMoveMessage = true;
         scene = SceneManager.GetActiveScene();
 
-        if (scene.name == "Level 2") {
+        if (scene.name == "Level 3") {
             player.GetSword();
         }
 
@@ -54,6 +54,16 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void PlayerDiedAnimation()
+    {
+        player.PlayerDie();
+    }
+
+    public void PlayerDied()
+    {
+        SceneManager.LoadScene("Game Over");
+    }
+
     public void ShowAttackMessage()
     {
         showAttackMessage = true;
@@ -61,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToLevel2()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Level 3");
     }
 
     void OnGUI()
