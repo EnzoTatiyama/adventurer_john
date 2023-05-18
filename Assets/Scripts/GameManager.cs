@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         showMoveMessage = true;
         scene = SceneManager.GetActiveScene();
 
-        if (scene.name == "Level 3") {
+        if (scene.name == "Level 3" || scene.name == "Level 2") {
             player.GetSword();
         }
 
@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void GoToLevel2()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+
+    public void GoToLevel3()
     {
         SceneManager.LoadScene("Level 3");
     }

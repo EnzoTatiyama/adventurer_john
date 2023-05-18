@@ -73,7 +73,7 @@ public class PlayerControll : MonoBehaviour
         if (collision.gameObject.tag == "Ground") {
             anim.SetBool("playerJump", false);
             isGrounded = true;
-        } else if (collision.gameObject.tag == "Enemy") {
+        } else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy 2") {
             isCollidingEnemy = true;
             if (anim.GetBool("playerAttack") && canAttack) {
                 enemyControl.TakeDamage(attackPower);
